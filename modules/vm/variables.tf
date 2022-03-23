@@ -23,11 +23,6 @@ variable "username" {
   description = "Default admin username for VM"
 }
 
-# variable "password" {
-#   type        = string
-#   description = "Default password for VM"
-# }
-
 variable "nic" {
   description = "Network Interface card attached to VM"
 }

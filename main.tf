@@ -10,7 +10,7 @@ module "network" {
   source    = "./modules/vnet"
   prefix = var.prefix
   location = var.location
-  rg-name    = module.rg.rg_name_output
+  rg-name    = module.rg.rg_name
   vnet-cidr  = ["10.0.0.0/16"]
   subnet-cidr  = ["10.0.1.0/24"]
 
@@ -21,7 +21,7 @@ module "vm" {
   source    = "./modules/vm"
   prefix = var.prefix
   location = var.location
-  rg-name    = module.rg.rg_name_output
+  rg-name    = module.rg.rg_name
   size      = "Standard_DS1"
   username     = "tf-admin"
   nic       = module.network.nic_output

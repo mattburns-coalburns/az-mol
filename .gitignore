@@ -21,3 +21,5 @@
 
 # Local TLS Private key that gets created at Terraform Apply
 webkey_private.pem
+
+*.ssh
