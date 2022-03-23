@@ -8,12 +8,12 @@ variable "location" {
   description = "The location for the deployment"
 }
 
-variable "vnetCidr" {
+variable "vnet-cidr" {
   description = "The CIDR for the Virtual Network"
 
 }
 
-variable "snetCidr" {
+variable "subnet-cidr" {
   description = "The CIDR for the Subnet"
 }
 

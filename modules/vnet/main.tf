@@ -2,7 +2,7 @@
 resource "azurerm_virtual_network" "vnet" {
   name                = "${var.prefix}Vnet"
   location            = var.location
-  address_space       = var.vnetCidr
+  address_space       = var.vnet-cidr
   resource_group_name = var.rg-name
 }
 
@@ -11,7 +11,7 @@ resource "azurerm_subnet" "sn" {
   name                 = "${var.prefix}Snet"
   resource_group_name  = var.rg-name
   virtual_network_name = azurerm_virtual_network.vnet.name
-  address_prefixes     = var.snetCidr
+  address_prefixes     = var.subnet-cidr
 }
 
 # Provides NIC for VM to connect to internal subnet
