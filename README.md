@@ -9,6 +9,7 @@
 
 ## Instructions
 - Clone this repo
+- `cd terraform`
 - `terraform init`
 - `terraform apply auto-approve`
 - Read the outputs to try out the resources it builds!
