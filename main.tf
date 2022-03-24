@@ -28,11 +28,21 @@ module "vm" {
   web-tls-public-key = module.tls.web-tls-public-key
 }
 
+# Invokes TLS Module
 module "tls" {
   source = "./modules/tls"  
 }
 
+# Invokes Locals Module
 module "local" {
   source = "./modules/local"
   web-tls-private-key = module.tls.web-tls-private-key
+}
+
+# Invokes Web App Module
+module "webapp" {
+  source = "./modules/webapp"
+  prefix = var.prefix
+  location = var.location
+  rg-name    = module.rg.rg_name
 }
