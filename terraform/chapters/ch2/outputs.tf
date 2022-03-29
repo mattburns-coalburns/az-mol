@@ -6,6 +6,6 @@ output "vm-url" {
  value = "http://${module.vm.web-public-ip}/"
 }
 
-output "webapp-url" {
- value = "http://${module.webapp.webapp-name}.azurewebsites.net/"
-}
+# output "webapp-url" {
+#  value = "http://${module.webapp.webapp-name}.azurewebsites.net/"
+# }

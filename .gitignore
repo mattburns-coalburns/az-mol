@@ -11,7 +11,7 @@
 *.tfstate.*
 
 # Terraform lock file
-.terraform**
+*.terraform*
 
 # Crash log files
 # Include override files you do wish to add to version control using negated pattern
@@ -20,6 +20,6 @@
 # Include tfplan files to ignore the plan output of command: terraform plan -out=tfplan
 
 # Local TLS Private key that gets created at Terraform Apply
-webkey_private.pem
+*.pem*
 
-*.ssh
+*.ssh*

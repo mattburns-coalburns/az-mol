@@ -1,5 +1,5 @@
 data "template_file" "linux-vm-cloud-init" {
-  template = file("../scripts/userdata.sh")
+  template = file("scripts/userdata.sh")
 }
 
 resource "azurerm_linux_virtual_machine" "web" {

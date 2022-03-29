@@ -1,13 +1,13 @@
 # Invokes Resource Group module
 module "rg" {
-  source    = "./modules/rg"
+  source    = "./rg"
   prefix = var.prefix
   location  = var.location
 }
 
 # Invokes Virtual Network Module
 module "network" {
-  source    = "./modules/vnet"
+  source    = "./vnet"
   prefix = var.prefix
   location = var.location
   rg-name    = module.rg.rg_name
@@ -18,7 +18,7 @@ module "network" {
 
 # Invokes Virtual Machine Module
 module "vm" {
-  source    = "./modules/vm"
+  source    = "./vm"
   prefix = var.prefix
   location = var.location
   rg-name    = module.rg.rg_name
@@ -30,19 +30,12 @@ module "vm" {
 
 # Invokes TLS Module
 module "tls" {
-  source = "./modules/tls"  
+  source = "./tls"  
 }
 
 # Invokes Locals Module
 module "local" {
-  source = "./modules/local"
+  source = "./local"
   web-tls-private-key = module.tls.web-tls-private-key
 }
 
-# Invokes Web App Module
-module "webapp" {
-  source = "./modules/webapp"
-  prefix = var.prefix
-  location = var.location
-  rg-name    = module.rg.rg_name
-}
