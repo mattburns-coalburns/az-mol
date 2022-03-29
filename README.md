@@ -1,11 +1,14 @@
 # Azure in a Month of Lunches
 
-## Resources Created
-- Resource Groups
-- Virtual Machines ()
-- Local files (SSH Keys)
-- Virtual Network
-- Web App (node.js)
+## Chapters
+1. (Before You Begin)
+2. Creating a Virtual Machine
+3. Azure Web Apps
+4. (Introduction to Azure Storage)
+5. Azure Networking Basics
+6. (Azure Resource Manager)
+7. High Availability and Redundancy
+8. Load Balancing Applications
 
 ## Instructions
 - Clone this repo
